@@ -10,7 +10,7 @@ pw = os.environ.get('POWERSCHOOL_DB_PASSWORD') #the password for the PSNavigator
 cs = os.environ.get('POWERSCHOOL_PROD_DB') #the IP address, port, and database name to connect to
 
 print("Username: " + str(un) + " |Password: " + str(pw) + " |Server: " + str(cs)) #debug so we can see where oracle is trying to connect to/with
-badnames = ['USE', 'training1','trianing2','trianing3','trianing4','planning','admin','nurse','user', 'use ', 'payroll', 'human', "benefits", 'test', 'teststudent','test student','testtt','testtest']
+badnames = ['USE','TEST','TESTSTUDENT','TEST STUDENT','TESTTT','TESTT','TESTTEST']
 
 with oracledb.connect(user=un, password=pw, dsn=cs) as con: # create the connecton to the database
 	with con.cursor() as cur:  # start an entry cursor
